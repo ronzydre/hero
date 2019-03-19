@@ -1,0 +1,145 @@
+{%load staticfiles updateable%}
+
+<script>
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
+const doSomething = async () => {
+  await sleep(5000)
+  window.location.href=("main/{{students}}/{{interests}}/");
+}
+ doSomething();
+</script>
+<html>
+
+
+<head>
+	
+		<!-- Site Title and Description -->
+		<title></title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="">
+
+		<link rel="stylesheet" href="{%static '/thesis/main/css/styles.css'%}" type="text/css" media="screen" />
+  		 		  	
+		<!--&lt;!&ndash;[if lte IE 8]>						-->
+		<!--<link rel="stylesheet" href="css/stylesIE.css" type="text/css" media="screen" />-->
+		<!--<![endif]&ndash;&gt;-->
+		
+		<!--&lt;!&ndash;[if lte IE 7]>				-->
+		<!--<link rel="stylesheet" href="css/stylesIE7.css" type="text/css" media="screen" />-->
+		<!--<![endif]&ndash;&gt;-->
+		
+		<script type="text/javascript" src="{%static '/thesis/main/ajax/libs/jquery/1.7/jquery.min.js'%}"></script>
+
+		<script src="{%static '/thesis/main/js/cufon-yui.js'%}"></script>
+		<!---->
+		<!--<script src="js/PT_Sans.font.js"></script>-->
+		<!---->
+		<!--<script src="js/PT_Sans_Narrow.font.js"></script>-->
+			   	
+		<script type="text/javascript" src="{%static '/thesis/main/js/custom.js'%}"></script>
+		
+		<!-- scripts for background slider; if you want to use background slider be sure you have this -->
+		
+		<script type="text/javascript" src="{%static '/thesis/main/js/supersized.3.2.6.min.js'%}"></script>
+		
+		<script type="text/javascript" src="{%static '/thesis/main/js/theme/supersized.shutter.min.js'%}"></script>
+	      
+	    <script type="text/javascript" src="{%static '/thesis/main/js/jquery.easing.min.js'%}"></script>
+	    
+	    <link rel="stylesheet" href="{%static '/thesis/main/css/supersized.css'%}" type="text/css" media="screen" />
+		
+		 <link rel="stylesheet" href="{%static '/thesis/main/js/theme/supersized.shutter.css'%}" type="text/css" media="screen" />
+		
+		<script type="text/javascript">
+			
+			jQuery(function($){
+				
+				$.supersized({
+				
+					// Functionality
+					slide_interval          :   3000,		// Length between transitions
+					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	700,		// Speed of transition
+															   
+					// Components							
+					slide_links				:	'false',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+					slides 					:  	[			// Slideshow Images
+														{image : '{%static "/thesis/main/images/background/background.jpg"%}'},
+														{image : '{%static "/thesis/main/images/background/background 1.jpg"%}'},
+														{image : '{%static "/thesis/main/images/background/background 3.jpg"%}'},
+														{image : '{%static "/thesis/main/images/background/background 4.jpg"%}'},
+														{image : '{%static "/thesis/main/images/background/background 5.jpg"%}'}
+				
+												]
+					
+				});
+		    });
+		    
+		</script>
+		<!-- scripts for background slider end here -->
+
+	</head>
+
+<body class="body_home slider">
+
+    <!-- Wrapper starts here -->
+	<div id="wrapper">
+		
+	     <!-- Navigation starts here -->	 
+		<div id="menu_wrap">
+			
+			<!-- Menu starts here -->
+			<div id="menu">
+		    	
+				<!-- Logo -->
+		      	<div id="logo">   
+			        <h1><a href="index-2.html" class="logo_image"></a></h1>      
+		      	</div>
+		      	<!-- Logo ends here -->
+		      
+		      	
+		      	<!-- Navbar -->
+			    <ul id="navbar">
+			    </ul> 
+			    <!-- Navbar ends here -->
+			    	       
+		    </div>
+		    <!-- Menu ends here -->
+		    
+		    <!-- Hide menu arrow -->
+		    <div id="hide_menu">   
+		    	<a href="#" class="menu_visible">Hide menu</a> 
+		        	<!-- Hide menu tooltip - remove if you don't need it! -->
+		        	<div class="menu_tooltip">
+		            	<p>Hide the navigation</p>
+		            </div>  		     
+		    </div>   		     
+		    <!-- Hide menu arrow ends here -->
+		       
+		</div>
+		<!-- Navigation ends here -->
+	         
+	</div>
+	<!-- wrapper ends here -->
+
+<script>
+	Cufon.now();     
+</script>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65012402-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,97 @@
+{%load staticfiles updateable%}
+{%if summarys%}
+<script>
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
+const doSomething = async () => {
+  await sleep(120000)
+  window.location.href=("/");
+}
+ doSomething();
+</script>
+<html lang="en-US" dir="ltr">
+   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+   <!-- /Added by HTTrack -->
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+       <meta http-equiv="refresh" content="120" >
+      <!--  Document Title
+         =============================================-->
+      <title></title>
+      <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
+
+      <meta name="theme-color" content="#ffffff">
+      <!--  Stylesheets
+         =============================================
+         --><!-- Default stylesheets-->
+      <link href="{%static '/thesis/lib/bootstrap/dist/css/bootstrap.min.css'%}" rel="stylesheet">
+      <!-- Template specific stylesheets-->
+      <link href="{%static 'assets/lib/owl.carousel/dist/assets/owl.carousel.css'%}" rel="stylesheet">
+      <!-- Main stylesheet and color file-->
+      <link href="{%static '/thesis/css/style.css'%}" rel="stylesheet">
+      <link id="color-scheme" href="{%static 'thesis/css/colors/default.css'%}" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script>
+	//paste this code under head tag or in a seperate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow").delay(2);;
+	});
+</script>
+   </head>
+   <body data-target=".onpage-navigation" data-offset="60">
+   <!-- 	<script>
+  document.body.className = 'fade';
+	</script> -->
+   	<div class="se-pre-con"></div>
+      <main>
+         <video id="video-background" autoplay loop muted poster="{%static 'thesis/images/3.jpg'%}">
+            <source src="{% static 'thesis/images/dre.mp4'%}" type="video/mp4">
+         </video>
+         <section class="main">
+               <div class="content">
+               	<div class= "container">
+             	<img src="{% static 'thesis/images/mdx.png'%}">
+                  <div class="counter" id="countdown">
+                     <h2 class="animated fadeInLeft delay-1s">{{titles}}</h2>
+                     <hr>
+                     <div class="">
+                        <div class="animated fadeInRight delay-3s">
+                           <p>{{summarys}}</p>
+                       		<p><i>{{authors}}</i></p>
+                        </div>
+                     </div>
+                  </div>
+
+              </div>
+               </div>
+         </section>
+      </main>
+      <!-- <script>
+  document.addEventListener("DOMContentLoaded", function(e) {
+    document.body.className = '';
+  });
+</script> -->
+      <!--  JavaScripts
+         =============================================-->
+         <script src="{% static '/thesis/lib/bootstrap/dist/js/bootstrap.min.js'%}"></script>
+         <script src="{% static '/thesis/lib/owl.carousel/dist/owl.carousel.js'%}"></script>
+         <script src="{% static '/thesis/lib/ajaxchimp/jquery.ajaxchimp.js'%}">
+
+         </script><script src="{% static '/thesis/js/main.js'%}"></script>
+   </body>
+</html>
+{%else%}
+<script>
+    window.location.href=("/");
+</script>
+{%endif%}

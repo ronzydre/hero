@@ -1,0 +1,49 @@
+{%load staticfiles%}
+
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="2" >
+
+    <!-- SEO -->
+    <title></title>
+    <meta name="description" content="">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/permalink"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="{%static 'thesis/css/webslides.css'%}">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type="text/css" media="all" href="{%static 'thesis/css/svg-icons.css'%}">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+  </head>
+  <body>
+        <main role="main">
+      <article id="webslides">
+      	 <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap aligncenter">
+            <h2>Anyone There ?</h2>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+</article>
+</main>
+ <script src="{%static 'thesis/js/webslides.js'%}"></script>
+
+    <!--<script>-->
+      <!--window.ws = new WebSlides();-->
+    <!--</script>-->
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="{% static 'thesis/js/svg-icons.js'%}"></script>
+</body>
+</html>
